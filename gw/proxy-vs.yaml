@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: proxy-service-ingress
+spec:
+  hosts: 
+  - '*'
+  gateways:
+  - proxy-gateway
+  http:
+  - route:
+    - destination:
+        host: 'proxy-app'
