@@ -3,7 +3,7 @@
   echo -e "\nСоздание Virtual Service для Proxy"
   kubectl apply -f gw/proxy-vs.yaml 
 
-  minikube tunnel &
+  #minikube tunnel &
 
   #Открыть доступ для Minikube наружу 
   # minikube tunnel

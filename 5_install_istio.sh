@@ -1,6 +1,6 @@
-curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.14.3 TARGET_ARCH=x86_64 sh - 
-sudo mv istio-1.14.3 /usr/local/bin/istio
-export PATH="$PATH:/usr/local/bin/istio/bin"
+#curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.14.3 TARGET_ARCH=x86_64 sh - 
+#sudo mv istio-1.14.3 /usr/local/bin/istio
+#export PATH="$PATH:/usr/local/bin/istio/bin"
 
 
 clear

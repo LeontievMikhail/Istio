@@ -5,6 +5,7 @@ echo "\nPrometheus - система мониторинга. С помощью н
 echo "\nДобавить репозиторий в Helm:"
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+helm repo add stable https://charts.helm.sh/stable
 helm repo update
 
 echo "\nРазвернуть решение по мониторингу на основе Prometheus:"

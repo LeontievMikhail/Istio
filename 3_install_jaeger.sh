@@ -11,7 +11,7 @@ helm install --version "2.19.0" -n jaeger-operator -f jaeger/operator-values.yam
 
 echo "\nРазвернуть Jaeger:"
 kubectl apply -f jaeger/jaeger.yaml
-sleep 5
+sleep 10
 echo "\nПроверить состояние Jaeger:"
 kubectl get po -n jaeger -l app.kubernetes.io/instance=jaeger
 

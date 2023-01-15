@@ -10,8 +10,8 @@ sleep 3
 echo "Проверить статус echoserver:"
 kubectl get po -l "app=echoserver"
 
-echo "Выполнить запрос к сервису:"
-curl $(minikube service echoserver --url)
+#echo "Выполнить запрос к сервису:"
+#curl $(minikube service echoserver --url)
 
 echo -e "\nProxy-app - сервис, умеющий запрашивать другие запросы по query-параметру url."
 echo -e "\nРазвернуть приложение proxy-app в кластере:"
@@ -20,8 +20,8 @@ sleep 3
 echo -e "\nПроверить статус приложения:"
 kubectl get po -l "app=proxy-app"
 
-echo -e "\nВыполнить запрос к сервису:"
-curl $(minikube service proxy-app --url)
+#echo -e "\nВыполнить запрос к сервису:"
+#curl $(minikube service proxy-app --url)
 
 echo -e "\nПосмотреть логи приложения:"
 kubectl logs -l app=proxy-app -c proxy-app
