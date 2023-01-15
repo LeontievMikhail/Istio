@@ -25,6 +25,10 @@ curl $(minikube service proxy-app --url)
 
 echo -e "\nПосмотреть логи приложения:"
 kubectl logs -l app=proxy-app -c proxy-app
-sleep 5
-echo -e "\n\nПодадим на сервер нагрузку"
-while true; do curl "$(minikube service proxy-app --url)?url=http://echoserver"; done
+#sleep 5
+#echo -e "\n\nПодадим на сервер нагрузку"
+#while true; do curl "$(minikube service proxy-app --url)?url=http://echoserver"; done
+
+#Не забудь добавить Лейбл и удалить старые поды#
+#kubectl label namespace  default istio-injection=enabled
+#kubectl delete po --all -n default     
