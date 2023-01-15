@@ -3,6 +3,8 @@
   echo -e "\nСоздание Virtual Service для Proxy"
   kubectl apply -f gw/proxy-vs.yaml 
 
+  minikube tunnel &
+
   #Открыть доступ для Minikube наружу 
   # minikube tunnel
   # or
@@ -14,3 +16,5 @@
   #curl 84.xxx.xxx.xxx:8081 (from a phone connected in 4G - this is the public ip exposed by my router)
   #
   #https://www.zepworks.com/posts/access-minikube-remotely-kvm/
+
+#while true; do sleep 0.25; curl http://10.103.14.38?url=http://echoserver; done

@@ -8,8 +8,7 @@ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 helm repo update
 
 echo "\nРазвернуть решение по мониторингу на основе Prometheus:"
-helm install --version "13.7.2" -n monitoring -f prometheus/operator-values.yaml prometheus \
-prometheus-community/kube-prometheus-stack
+helm install --version "13.7.2" -n monitoring -f prometheus/operator-values.yaml prometheus prometheus-community/kube-prometheus-stack
 
 echo "\nПроверить состояние компонентов мониторинга:"
 kubectl get po -n monitoring

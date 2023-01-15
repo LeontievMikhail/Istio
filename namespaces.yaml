@@ -21,3 +21,14 @@ metadata:
   name: kiali-operator
   labels:
     istio-injection: disabled
+
+---
+
+# Создать Namespace
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: istio-system
+  labels:
+    istio-injection: disabled
