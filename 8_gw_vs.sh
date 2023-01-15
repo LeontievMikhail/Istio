@@ -17,4 +17,4 @@
   #
   #https://www.zepworks.com/posts/access-minikube-remotely-kvm/
 
-#while true; do sleep 0.25; curl http://10.103.14.38?url=http://echoserver; done
+#while true; do sleep 0.25; curl "http://{*Load balancer external IP*}?url=http://echoserver"; done
